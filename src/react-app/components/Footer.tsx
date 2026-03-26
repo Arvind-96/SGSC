@@ -116,8 +116,10 @@ export default function Footer() {
             <div>
               <h5 className="font-semibold text-orange-400 text-sm mb-1">Address</h5>
               <p className="text-sm text-gray-900">
-                Near Jindal Supreme India Limited,<br />
-                Delhi Road, Hisar, Haryana - India
+                Near Jindal Supreme India Limited,
+                Delhi Road,<br /> Hisar, Haryana - India,
+                4<sup>TH</sup> Floor G-4 Pushkar Enclave <br />Paschim Vihar New Delhi-110063
+
               </p>
             </div>
           </div>
@@ -132,7 +134,7 @@ export default function Footer() {
               Copyright © {new Date().getFullYear()} Shree Gopala Sanwaria Chemicals. All Rights Reserved.
             </p>
             <p className="text-xs text-white/80">
-              Made with <span className="text-orange-500">❤</span> in India
+              Made By <span className="text-orange-500">AHD Web Services</span>
             </p>
           </div>
         </div>
