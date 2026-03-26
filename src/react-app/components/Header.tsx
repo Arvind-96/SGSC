@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import logo from "/logo.png";
 const LOGO_URL = "/logo.png";
-const GOD_IMAGE_URL = "https://019d0f4c-31b1-7e7a-b21c-5fdcbc326ce4.mochausercontent.com/hyper-realistic-radha-krishna-divine-260nw-2731679903.webp";
+const GOD_IMAGE_URL = "/god_image.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -15,7 +15,12 @@ const navLinks = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t, i18n } = useTranslation();
   const location = useLocation();
+
+  const toggleLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };  
 
   useEffect(() => {
     const handleScroll = () => {
