@@ -12,15 +12,16 @@ const navLinks = [
   { name: "Contact Us", path: "/contact" },
 ];
 
+declare global {
+  interface Window {
+    changeLanguageByGoogle: (lang: string) => void;
+  }
+}
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { t, i18n } = useTranslation();
+  
   const location = useLocation();
-
-  const toggleLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +32,23 @@ export default function Header() {
   }, []);
 
   return (
+    <>
+      {/* Fixed Language Switcher - Top Right */}
+      <div className="fixed top-2 right-4 z-[60] flex gap-2 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full shadow-md border border-gray-100">
+        <button 
+          onClick={() => window.changeLanguageByGoogle('en')} 
+          className="text-[10px] md:text-xs font-bold text-gray-700 hover:text-[#FF9933] transition-colors"
+        >
+          ENGLISH
+        </button>
+        <span className="text-gray-300">|</span>
+        <button 
+          onClick={() => window.changeLanguageByGoogle('hi')} 
+          className="text-[10px] md:text-xs font-bold text-gray-700 hover:text-[#FF9933] transition-colors"
+        >
+          हिन्दी
+        </button>
+      </div>
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? "pt-2 px-2 md:px-4 lg:px-8" : "pt-4 px-4 md:px-8 lg:px-16"
     }`}>
@@ -128,5 +146,7 @@ export default function Header() {
         )}
       </div>
     </header>
+    </>
   );
+
 }
