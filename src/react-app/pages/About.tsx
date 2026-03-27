@@ -30,65 +30,7 @@ export default function AboutPage() {
 
       <main className="flex-1">
         {/* Company Intro Section */}
-        <section className="py-12 md:py-16 bg-gray-900">
-          <div className="max-w-6xl mx-auto px-4 md:px-8">
-            <div className="grid md:grid-cols-2 gap-10 items-center">
-              <div>
-                <span className="text-orange-400 text-sm font-bold tracking-wider uppercase">
-                  About SGSC
-                </span>
-                <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-white font-bold mt-2 mb-6 leading-tight">
-                  We Are Here To Deliver Quality Chemicals For Your Industry
-                </h2>
-                <p className="text-white/90 leading-relaxed mb-6">
-                  With over {companyInfo.yearsOfExperience} years of expertise, Shree Gopala Sanwaria Chemicals 
-                  delivers high-quality zinc-based chemicals, precision metal powders, and quality metal ingots 
-                  to industries across India and beyond. Built on the vision of transforming metal scrap into 
-                  valuable industrial solutions.
-                </p>
-                <p className="text-white/90 leading-relaxed mb-8">
-                  Founded by <span className="font-semibold">Mr. Sandeep Bansal</span> in {companyInfo.established}, 
-                  our company has grown from a small processing unit to a trusted industry name. Our state-of-the-art 
-                  manufacturing facility in Hisar is equipped with modern processing equipment and dedicated quality 
-                  control laboratories.
-                </p>
-                
-                {/* 25+ Years Badge */}
-                <div className="inline-flex items-center bg-orange-500/20 backdrop-blur-sm rounded-xl p-4 mb-8 border border-orange-500/30">
-                  <div className="text-center">
-                    <p className="text-4xl font-bold text-orange-400">{companyInfo.yearsOfExperience}+</p>
-                    <p className="text-white/80 text-sm">Years Experience</p>
-                  </div>
-                </div>
-
-                {/* Checklist */}
-                <div className="grid grid-cols-2 gap-3">
-                  {[
-                    "BIS Quality Standards",
-                    "In-house Quality Lab",
-                    "Sustainable Practices",
-                    "Pan-India Delivery"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Check className="w-3 h-3 text-white" />
-                      </div>
-                      <span className="text-white text-sm">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800" 
-                  alt="Industrial facility" 
-                  className="rounded-2xl shadow-2xl w-full h-80 md:h-96 object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+        <section class="py-12 md:py-16 bg-white"><div class="max-w-4xl mx-auto px-4 md:px-8 text-center flex flex-col items-center"><div><span class="text-orange-400 text-sm font-bold tracking-wider uppercase">About SGSC</span><h2 class="font-serif text-2xl md:text-3xl lg:text-4xl text-gray-900 font-bold mt-2 mb-6 leading-tight">We Are Here To Deliver Quality Chemicals For Your Industry</h2><p class="text-gray-900 leading-relaxed mb-6">With over 25 years of expertise, Shree Gopala Sanwaria Chemicals delivers high-quality zinc-based chemicals, precision metal powders, and quality metal ingots to industries across India and beyond. Built on the vision of transforming metal scrap into valuable industrial solutions.</p><p class="text-gray-900 leading-relaxed mb-8">Founded by <span class="font-semibold">Mr. Sandeep Bansal</span> in 1998, our company has grown from a small processing unit to a trusted industry name. Our state-of-the-art manufacturing facility in Hisar is equipped with modern processing equipment and dedicated quality control laboratories.</p></div></div></section>
 
         {/* Mission & Vision Section */}
         <section className="py-12 md:py-16 bg-white">
@@ -125,7 +67,7 @@ export default function AboutPage() {
         </section>
 
         {/* Founder Section */}
-        <section className="py-12 md:py-16 bg-gray-50">
+       {/* <section className="py-12 md:py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 md:px-8">
             <span className="text-orange-500 text-sm font-bold tracking-wider uppercase">
               Leadership
@@ -158,7 +100,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section>*/}
 
         {/* Core Values Section */}
         <section className="py-12 md:py-16 bg-gray-900">
